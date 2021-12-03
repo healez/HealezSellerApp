@@ -10,6 +10,8 @@ import javax.persistence.OneToOne;
 import javax.persistence.SequenceGenerator;
 import javax.persistence.Table;
 
+import com.healez.product.data.AgentProfile;
+
 import lombok.Getter;
 import lombok.Setter;
 
@@ -43,8 +45,7 @@ public class AddressEntity {
 	@Column(name="address_country_code", nullable = false, length=5)
 	private String addressCountryCode;
 	
-	@OneToOne()
-	@JoinColumn(name="agentProfile")
-	private AgentProfileEntity agentProfile;
+	@Column(name="agent_id", nullable = false, length=20)
+	private String agentId;
 	
 }
