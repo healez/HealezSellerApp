@@ -45,6 +45,7 @@ public class ConsolidatedInfoServiceImpl implements ConsolidatedInfoService{
 						agentProfileService.addAgentProfile(agentProfile, agentResponse);
 						if(agentResponse.getAgentId()!=null) {
 							UserInfo userInfo = agentRequest.getUserInfo();
+							userInfo.setStatus("A");
 							userInfoService.addUserInfo(userInfo,agentResponse);
 							List<Address> agentAddress = agentRequest.getAgentAddress();
 							addressService.addAddress(agentAddress, agentResponse);

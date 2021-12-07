@@ -8,4 +8,5 @@ import lombok.Setter;
 public class UserInfo {
 	private String password;
 	private String contactNumber;
+	private String status;
 }

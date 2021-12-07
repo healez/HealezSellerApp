@@ -23,5 +23,9 @@ public class UserDetailEntity {
 
 	@Column(name="agent_contact", nullable = false, length = 20)
 	private String agentContact;
+	
+	@Column(name="agent_status", nullable = false, length = 2)
+	private String agentStatus;
+
 
 }

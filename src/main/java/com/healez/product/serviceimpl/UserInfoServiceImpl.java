@@ -29,7 +29,8 @@ public class UserInfoServiceImpl implements UserInfoService{
 		ue.setPassword(passwordEncoder().encode(userInfo.getPassword()));
 		ue.setAgentContact(userInfo.getContactNumber());
 		ue.setUserName(agentResponse.getAgentId());
-
+		ue.setAgentStatus(userInfo.getStatus());
+		
 		ue = userRepo.save(ue);
 		
 		userInfo.setPassword(ue.getPassword());
